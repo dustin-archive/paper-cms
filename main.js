@@ -22,7 +22,7 @@ function view (state, actions) {
 app({
   state: {
     view: 'home',
-    prop: 'blog',
+    prop: 'about',
     data: {
       home: {
         header: { type: 'image', data: '' },
@@ -39,9 +39,9 @@ app({
   },
   view: (state, actions) => view(state, actions),
   actions: {
-    update (state, actions, obj) {
+    update (state, actions, arr) {
       const data = Object.assign({}, state.data)
-      data[state.prop][obj.key] = obj.value
+      data[state.prop][arr[0]] = arr[1]
       return data
     }
   }
