@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0'>
+    <title>Paper CMS</title>
+    <style>
+      /* fonts */
+      /* ==================================================================== */
+      @font-face {
+        font-family: 'Material Icons';
+        src:
+          local('MaterialIcons'),
+          local('MaterialIcons-Regular'),
+          url('fonts/MaterialIcons-Regular.woff2') format('woff2'),
+          url('fonts/MaterialIcons-Regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Roboto';
+        src:
+          local('Roboto'),
+          local('Roboto-Regular'),
+          url('fonts/roboto-v16-latin-regular.woff2') format('woff2'),
+          url('fonts/roboto-v16-latin-regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Roboto Mono';
+        src:
+          local('RobotoMono'),
+          local('RobotoMono-Regular'),
+          url('fonts/roboto-mono-v4-latin-regular.woff2') format('woff2'),
+          url('fonts/roboto-mono-v4-latin-regular.woff') format('woff');
+      }
+      /*.material-icons {
+        font-family: 'Material Icons';
+        font-feature-settings: 'liga'; // IE
+        font-size: 24px;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1;
+        text-rendering: optimizeLegibility; // Safari and Chrome
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased; // WebKit
+        -moz-osx-font-smoothing: grayscale; // Firefox
+      }*/
+
+      /* reset */
+      /* ==================================================================== */
+      * {
+        position: relative;
+        box-sizing: border-box;
+        font: inherit;
+      }
+      body {
+        font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
+        margin: 0;
+      }
+
+      /* button */
+      /* ==================================================================== */
+      .button-icon {
+        font-family: 'Material Icons';
+        font-size: 24px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .button-label {
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        letter-spacing: 0.0625rem;
+      }
+      .button span {
+        display: block;
+        margin: auto 0;
+        padding: 0 8px;
+      }
+      .button:hover, .button:focus {
+        background: hsla(0,0%,100%,0.25);
+      }
+      .button {
+        display: flex;
+        height: 48px;
+        padding: 0 8px;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      /* bar */
+      /* ==================================================================== */
+      .bar {
+        display: flex;
+        background: hsl(200, 85%, 50%);
+      }
+
+      /* input */
+      /* ==================================================================== */
+      .input:focus {
+        border-color: hsl(200, 85%, 50%);
+      }
+      .input::-webkit-input-placeholder {
+        color: hsl(200, 15%, 75%);
+      }
+      .input {
+        outline: none;
+        display: block;
+        width: 100%;
+        height: 48px;
+        padding: 0 12px;
+        border: 0 solid hsl(200, 15%, 87.5%);
+        border-bottom-width: 2px;
+      }
+
+      /* page */
+      /* ==================================================================== */
+      .page-inner {
+        flex: 1;
+        display: flex;
+      }
+      .page {
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+      }
+
+      /* dash */
+      /* ==================================================================== */
+      .dash-scroll {
+        flex: 1;
+        padding: 24px;
+        overflow: auto;
+      }
+      .dash-block + .dash-block {
+        padding: 12px 0 0;
+      }
+      .dash {
+        display: flex;
+        flex-flow: column;
+        min-width: 384px;
+        background: #fff;
+      }
+
+      /* site */
+      /* ==================================================================== */
+      .site {
+        flex: 1;
+        background: hsl(200, 15%, 93.75%);
+      }
+    </style>
+  </head>
+  <body>
+    <script src='https://unpkg.com/hyperapp'></script>
+    <script src='main.js'></script>
+  </body>
+</html>

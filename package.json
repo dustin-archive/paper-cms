@@ -1,0 +1,14 @@
+{
+  "name": "paper-cms",
+  "version": "0.0.0",
+  "description": "A minimal JSON oriented CMS",
+  "main": "index.js",
+  "author": "Dustin Dowell <dustindowell22@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup main.js --format iife --output bundle.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.6"
+  }
+}
