@@ -1,6 +1,5 @@
 import { h, app } from 'hyperapp'
-import { button } from './button'
-import { bar } from './components'
+import { bar, button } from './components'
 import { dash } from './dash'
 
 function site (state) {
@@ -22,14 +21,15 @@ function view (state, actions) {
 app({
   state: {
     view: 'home',
-    prop: 'about',
+    prop: 'home',
     data: {
-      home: {
-        header: { type: 'image', data: '' },
-        title: { type: 'text', data: 'title' },
-        color: { type: 'text', data: 'blue' },
-        big: { type: 'check', data: true }
-      },
+      home: [
+        { name: 'header', type: 'image', data: '' },
+        { name: 'title', type: 'text', data: 'title' },
+        { name: 'color', type: 'text', data: 'blue' },
+        { name: 'big', type: 'check', data: true },
+        { name: 'unknown', type: 'foo', data: true }
+      ],
       about: {
         title: 'title',
         callout: 'callout',
@@ -41,7 +41,7 @@ app({
   actions: {
     update (state, actions, arr) {
       const data = Object.assign({}, state.data)
-      data[state.prop][arr[0]] = arr[1]
+      data[state.prop][arr[0]].data = arr[1]
       return data
     }
   }
